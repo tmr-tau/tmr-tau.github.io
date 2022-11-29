@@ -14,6 +14,6 @@ In addition to your username, password, and desired database the following conne
 **TMR users:**
 
 ======== =======================================================================================
-**Host** ``tau-pg-prod.qdot.qld.gov.au``
+**Host** ``tau-rds.tmr.qld.gov.au``
 **Port** ``5432``
 ======== =======================================================================================
