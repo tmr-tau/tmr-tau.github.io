@@ -7,7 +7,7 @@ setuptools.setup(
     name="qtmcop-docs",
     version="0.0.1",
     author="Department of Transport and Main Roads",
-    author_email="nikhil.z.ahuja@tmr.qld.gov.au",
+    author_email="transport_analysis_requests@tmr.qld.gov.au",
     description="QTMCoP",
     long_description=long_description,
     long_description_content_type="text/markdown",
