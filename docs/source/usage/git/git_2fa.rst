@@ -3,7 +3,7 @@ Setting up two-factor authentication in GitLab
 
 Login to your account here [https://qtmcop.tmr.qld.gov.au]
 
-If you don't have an account, contact `TAU <qtmcop@tmr.qld.gov.au>`_.
+If you don't have an account, contact `TAU <transport_analysis_requests@tmr.qld.gov.au>`_.
 
 Once you login to your account, make sure you setup Two Factor Authentication in `settings <https://qtmcop.tmr.qld.gov.au/profile/two_factor_auth>`_.
 
