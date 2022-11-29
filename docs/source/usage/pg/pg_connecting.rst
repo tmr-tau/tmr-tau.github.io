@@ -7,7 +7,7 @@ In addition to your username, password, and desired database the following conne
 **External users:**
 
 ======== =======================================================================================
-**Host** ``tau-aurora-postgresql-cluster.cluster-cfbcjdgws3od.ap-southeast-2.rds.amazonaws.com``
+**Host** ``tau-rds.tmr.qld.gov.au``
 **Port** ``5432``
 ======== =======================================================================================
 
