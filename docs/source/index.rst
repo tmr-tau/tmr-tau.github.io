@@ -20,7 +20,7 @@ The benefits for TMR, our Govt. Partners, academia and industry includes but not
 - Promote competition and innovation in the local market
 - Focus effort towards ground-breaking development
 
-To get started, please contact `TAU <qtmcop@tmr.qld.gov.au>`_.
+To get started, please contact `TAU <transport_analysis_requests@tmr.qld.gov.au>`_.
 
 If you already have an account you can check out these resources for more info about how to begin collaborating.
 
