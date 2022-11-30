@@ -1,6 +1,6 @@
 Installing Git on your PC
 -------------------------
-The QTMCoP project framework requires git to be installed on your machine.
+Most TAU projects are now hosted on GitHub and requires git to be installed on your machine.
 
 The easiest way to achieve this is to download and install from `here <https://git-scm.com/downloads>`_.
 

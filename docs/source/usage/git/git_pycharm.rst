@@ -7,7 +7,7 @@ To clone a project from GitLab in PyCharm follow these steps (assuming you have 
 2. Open PyCharm and select Get From Version Control*
 3. Paste your clone URL from step 1 into the URL field in PyCharm
 4. (optional) Change the directory where you want to set up your local repository
-5. Login to GitLab with your username and use your Access Token (see Git Installation) as your password
+5. Login to GitLab with your username and password
 
 .. note:: \*If you already have a project open this option appears in the VCS menu
 

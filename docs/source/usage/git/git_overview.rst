@@ -2,7 +2,7 @@ Git overview
 ------------
 First let's clarify some software and their roles (colours relate to the diagram below):
 
-* **GitLab**: Is a remote repository for storing version controlled code. TMR's GitLab server is hosted within the TMR AWS tenancy.
+* **GitHub**: Is a platform for storing version controlled code. TAU's GitHub is managed by ITB under TMR's enterprise GitHub.
 * **PyCharm / VSCode**: These are IDEs you're using to write code in a workspace (which remains "staged" there until you commit it to your local repository)
 * **Git**: Is the software that handles the version controlling of your code and acts as the communication interface between your IDE and GitLab.
 
