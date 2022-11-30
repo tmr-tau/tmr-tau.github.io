@@ -5,30 +5,15 @@
 
 .. _home:
 
-Welcome to the QTMCoP
-=====================
+Transport Analysis Unit's Documentation
+=======================================
 
-Queensland Transport Modelling Community of Practice is setup to adopt and enable a more collaborative approach for transport modelling.
-
-The benefits for TMR, our Govt. Partners, academia and industry includes but not limited to,
-
-- More efficient, transparent and traceable code development
-- Knowledge and insight capture of transport modelling code development
-- Ongoing, continuous improvements to transport modelling code
-- Increase opportunities for collaboration and strengthening relationships with government partners, academic and industry
-- Minimise duplication of and costs for transport modelling code development
-- Promote competition and innovation in the local market
-- Focus effort towards ground-breaking development
-
-To get started, please contact `TAU <transport_analysis_requests@tmr.qld.gov.au>`_.
-
-If you already have an account you can check out these resources for more info about how to begin collaborating.
+You can check out these resources for more info about how to begin collaborating.
 
 .. toctree::
    :maxdepth: 2
    :caption: General
 
-   usage/tau_info
    usage/git_info
    usage/pg_info
 
@@ -40,4 +25,5 @@ If you already have an account you can check out these resources for more info a
    projects/luptai
    projects/seqef
    projects/dspark
+   projects/qfm
 
