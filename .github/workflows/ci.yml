@@ -38,7 +38,7 @@ jobs:
           PYTHON_VENV_DIR: '.'
 
       - name: commit changes to gh-pages
-        if: ${{ github.ref == 'refs/heads/develop' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
