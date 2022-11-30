@@ -1,19 +1,26 @@
 Using Git in PyCharm
 --------------------
+To clone a project from GitHub in PyCharm follow these steps (assuming you have done the setup as per the above installation guide):
 
-To clone a project from GitLab in PyCharm follow these steps (assuming you have done the setup as per the above Git Installation guide):
-
-1. Navigate to your GitLab project in your web browser and click the blue Clone button and then copy the URL for via HTTP
-2. Open PyCharm and select Get From Version Control*
+1. In GitHub (via web browser) navigate to the repository, click the green Code button and then copy the URL shown.
+2. Open PyCharm (if you have a project already open, close it) and select Get From Version Control
 3. Paste your clone URL from step 1 into the URL field in PyCharm
 4. (optional) Change the directory where you want to set up your local repository
-5. Login to GitLab with your username and password
+5. You will be asked to Log in via GitHub or Use Token. Select Log in via GitHub.
+6. Click through the relevant screens to authorise JetBrains to access GitHub; you may need to click the blue request button next to the TAU organisation when you get to the GitHub authorisation screen.
 
-.. note:: \*If you already have a project open this option appears in the VCS menu
+If the authorisation has worked, PyCharm will start cloning your repository and open it as a new PyCharm project. If Step 6 from above doesn't allow you to authorize Github in PyCharm or if you get some SSH/proxy sounding error, there's an alternative method to access the repository:
 
-You should now have a local copy of the repository and can begin work (although you might want to create a branch first so that you're not working on the master branch, which is considered bad practice).
+1. Create a personal access token (Creating a personal access token - GitHub Docs). Important to save this token somewhere safe.
+2. Authorize token to access tmr-tau team (Authorizing a personal access token for use with SAML single sign-on - GitHub Docs)
+3. In GitHub (via web browser) navigate to the repository, click the green Code button and then copy the URL shown.
+4. Open PyCharm (if you have a project already open, close it) and select Get From Version Control
+5. Paste your clone URL from step 3 into the URL field in PyCharm
+6. (optional) Change the directory where you want to set up your local repository
+7. You will be asked to Log in via GitHub or Use Token. Select Use Token.
+8. Insert token when asked.
 
-To create a new branch follow these steps:
+Navigation between branches and creation of new branches can all be done via your repository menu in the bottom right (it will likely say master after cloning). To create a new branch follow these steps:
 
 1. Click on master in the bottom right
 2. Click + New branch
