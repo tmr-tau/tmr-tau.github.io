@@ -1,0 +1,59 @@
+name: build
+
+# Github Action triggers
+on:
+  push:
+  workflow_dispatch:
+
+
+env:
+  # Environmental variables for tox.ini
+  PYTHON_VENV_DIR: '.'
+
+# CI Jobs for QFM Application
+jobs:
+
+  # Build documentation
+  SphinxDocs:
+    # needs: test
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup python 
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip"
+      - name: Install dependencies
+        run:
+          pip install -r requirements.txt
+
+      - name: Generate Documentation
+        run: |
+          tox -e docs
+        env:
+          PYTHON_VENV_DIR: '.'
+
+      - name: commit changes to gh-pages
+        if: ${{ github.ref == 'refs/heads/develop' }}
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          mv docs/build/{.[!.],}* docs
+          rm -rf docs/build/
+          rm -rf docs/source/
+          git add docs/
+          git commit -m "Add changes for $GITHUB_SHA"
+          git branch gh-pages
+          git checkout --force gh-pages
+
+      - name: Push Documentation
+        if: ${{ github.ref == 'refs/heads/develop' }}
+        uses: ad-m/github-push-action@v0.6.0  # a marketplace action for pushing
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
