@@ -7,7 +7,7 @@ There are certain protocols which must be followed when undertaking database dev
 Object ownership
 ****************
 
-Object ownership must be managed carefully to ensure that all users collaborating on a project can do everything they need to do. Ownership and it's associated privileges are not grantable, but they can be inherited by being a member of the role that owns the object. For example, if ``proj_dev`` owns ``this_table`` and ``org_proj`` is a member of ``proj_dev`` then ``org_proj`` inherits ownership of ``this_table`` by proxy. But ``this_table`` must be owned by ``proj_dev`` (as opposed to being owned by ``org_proj``) otherwise other memebrs of ``proj_dev`` won't be able to interact with it fully.
+Object ownership must be managed carefully to ensure that all users collaborating on a project can do everything they need to do. Ownership and it's associated privileges are not grantable, but they can be inherited by being a member of the role that owns the object. For example, if ``proj_dev`` owns ``this_table`` and ``org_proj`` is a member of ``proj_dev`` then ``org_proj`` inherits ownership of ``this_table`` by proxy. But ``this_table`` must be owned by ``proj_dev`` (as opposed to being owned by ``org_proj``) otherwise other members of ``proj_dev`` won't be able to interact with it fully.
 
 To ensure this happens, users must always take one of these two paths when interacting with the server:
 
