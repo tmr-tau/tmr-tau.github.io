@@ -51,7 +51,7 @@ jobs:
           git checkout --force gh-pages
 
       - name: Push Documentation
-        if: ${{ github.ref == 'refs/heads/develop' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: ad-m/github-push-action@v0.6.0  # a marketplace action for pushing
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
