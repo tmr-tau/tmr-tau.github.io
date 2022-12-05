@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using Git in PyCharm &mdash; TAUDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> TAUDocs
+            <img src="../../_static/Qld-CoA-Stylised-2LS-mono-rev.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git_info.html">Git / GitHub info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pg_info.html">PostgreSQL info</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/rfmd.html">Region Foccussed Model Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/luptai.html">Land-use Urban Planning and Transport Accessibility Indicator (LUPTAI) model.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/seqef.html">SEQEF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/dspark.html">Dspark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/qfm.html">Queensland Freight Model</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TAUDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Using Git in PyCharm</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/git/git_pycharm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-git-in-pycharm">
+<h1>Using Git in PyCharm<a class="headerlink" href="#using-git-in-pycharm" title="Permalink to this heading"></a></h1>
+<p>To clone a project from GitHub in PyCharm follow these steps (assuming you have done the setup as per the above installation guide):</p>
+<ol class="arabic simple">
+<li><p>In GitHub (via web browser) navigate to the repository, click the green Code button and then copy the URL shown.</p></li>
+<li><p>Open PyCharm (if you have a project already open, close it) and select Get From Version Control</p></li>
+<li><p>Paste your clone URL from step 1 into the URL field in PyCharm</p></li>
+<li><p>(optional) Change the directory where you want to set up your local repository</p></li>
+<li><p>You will be asked to Log in via GitHub or Use Token. Select Log in via GitHub.</p></li>
+<li><p>Click through the relevant screens to authorise JetBrains to access GitHub; you may need to click the blue request button next to the TAU organisation when you get to the GitHub authorisation screen.</p></li>
+</ol>
+<p>If the authorisation has worked, PyCharm will start cloning your repository and open it as a new PyCharm project. If Step 6 from above doesn’t allow you to authorize Github in PyCharm or if you get some SSH/proxy sounding error, there’s an alternative method to access the repository:</p>
+<ol class="arabic simple">
+<li><p>Create a personal access token (Creating a personal access token - GitHub Docs). Important to save this token somewhere safe.</p></li>
+<li><p>Authorize token to access tmr-tau team (Authorizing a personal access token for use with SAML single sign-on - GitHub Docs)</p></li>
+<li><p>In GitHub (via web browser) navigate to the repository, click the green Code button and then copy the URL shown.</p></li>
+<li><p>Open PyCharm (if you have a project already open, close it) and select Get From Version Control</p></li>
+<li><p>Paste your clone URL from step 3 into the URL field in PyCharm</p></li>
+<li><p>(optional) Change the directory where you want to set up your local repository</p></li>
+<li><p>You will be asked to Log in via GitHub or Use Token. Select Use Token.</p></li>
+<li><p>Insert token when asked.</p></li>
+</ol>
+<p>Navigation between branches and creation of new branches can all be done via your repository menu in the bottom right (it will likely say master after cloning). To create a new branch follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Click on master in the bottom right</p></li>
+<li><p>Click + New branch</p></li>
+<li><p>Give your new branch a name that follows the naming protocol used in this project (usually <code class="docutils literal notranslate"><span class="pre">username/task_youre_working_on</span></code>)</p></li>
+<li><p>Click OK (leaving the checkout branch option ticked will switch you onto this branch and off master)</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-22, Department of Transport And Main Roads.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

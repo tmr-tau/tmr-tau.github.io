@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git / GitHub info &mdash; TAUDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PostgreSQL info" href="pg_info.html" />
+    <link rel="prev" title="Transport Analysis Unit’s Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> TAUDocs
+            <img src="../_static/Qld-CoA-Stylised-2LS-mono-rev.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git / GitHub info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-overview">Git overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-git-on-your-pc">Installing Git on your PC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-two-factor-authentication-in-gitlab">Setting up two-factor authentication in GitLab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-git-in-pycharm">Using Git in PyCharm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pg_info.html">PostgreSQL info</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/rfmd.html">Region Foccussed Model Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/luptai.html">Land-use Urban Planning and Transport Accessibility Indicator (LUPTAI) model.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/seqef.html">SEQEF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/dspark.html">Dspark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/qfm.html">Queensland Freight Model</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TAUDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Git / GitHub info</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/usage/git_info.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git-github-info">
+<h1>Git / GitHub info<a class="headerlink" href="#git-github-info" title="Permalink to this heading"></a></h1>
+<p>GitHub handles accounts and organizations separatly, this means you can use your existing GitHub accounts to access our repositories.
+There’s no need to create a new account if you already have one. We can give your existing account membership to our organization.</p>
+<section id="git-overview">
+<h2>Git overview<a class="headerlink" href="#git-overview" title="Permalink to this heading"></a></h2>
+<p>First let’s clarify some software and their roles (colours relate to the diagram below):</p>
+<ul class="simple">
+<li><p><strong>GitHub</strong>: Is a platform for storing version controlled code. TAU’s GitHub is managed by ITB under TMR’s enterprise GitHub.</p></li>
+<li><p><strong>PyCharm / VSCode</strong>: These are IDEs you’re using to write code in a workspace (which remains “staged” there until you commit it to your local repository)</p></li>
+<li><p><strong>Git</strong>: Is the software that handles the version controlling of your code and acts as the communication interface between your IDE and GitLab.</p></li>
+</ul>
+<p>Now for some Git terminology and how these features interact:</p>
+<ul class="simple">
+<li><p><strong>Clone/pull</strong>: Clone/pull a project (set of code) from a remote repository to your workspace (local)</p></li>
+<li><p><strong>Branch</strong>: All code has a “main” (sometimes called “master”) branch. The main branch contains the latest working version of all code. You will probably have cloned this branch (although you can clone others). Now you want to start making some changes so you will create a branch of your own, which is a point-in-time deviation from the main branch.</p></li>
+<li><p><strong>Commit</strong>: You’re now working on the branch you created making changes that won’t impact the main branch. Well done, this is good practice. As you make changes in an IDE they’re probably being saved automatically, but when you reach particular milestones you may want to commit those changes. Think of this as a hard save so you have a marker in time that you can go back to. But commits are still only local.</p></li>
+<li><p><strong>Push</strong>: Because you live in fear of losing your work that was not backed up, at the end of each day you make a habit of pushing your code to the remote repository to back it up and let others see where you’re up to. When you push whilst on a branch, you’re still not messing with the main branch, you’re now putting your branch in the remote repository and pushing to that. No harm done!</p></li>
+<li><p><strong>Merge</strong>: You’ve now made all the changes you want to make on that branch and you’re ready to merge it into the main branch. To do this you create a merge request. The maintainer of your repository can talk you through protocols around this as they may vary from project to project.</p></li>
+</ul>
+<p>The below diagram outlines how these actions relate to one another as well as some additional actions.</p>
+<img alt="../_images/git_flow.png" src="../_images/git_flow.png" />
+<p>For those within TMR, you can listen to our GitHub training videos for more information.</p>
+<p><a class="reference external" href="https://web.microsoftstream.com/video/2c058dcb-6b39-4a8e-85e9-d5847eca5cb1">Watch ‘Git Fundamentals - Session 1 of 2’ | Microsoft Stream (Classic)</a>
+<a class="reference external" href="https://web.microsoftstream.com/video/955003f0-37f5-4951-933e-1e426820c3dd">Watch ‘Git Fundamentals - Session 2 of 2’ | Microsoft Stream (Classic)</a></p>
+</section>
+<section id="installing-git-on-your-pc">
+<h2>Installing Git on your PC<a class="headerlink" href="#installing-git-on-your-pc" title="Permalink to this heading"></a></h2>
+<p>Most TAU projects are now hosted on GitHub and requires git to be installed on your machine.</p>
+<p>For TMR staff, the best way to do this is to place a SCO request for Git / GitHub access. The packaged installer will deal with some TMR environment specific challenges.</p>
+<p>For external staff, consult your IT department or download and install from <a class="reference external" href="https://git-scm.com/downloads">here</a>.</p>
+<p>Once you have done the installation, open git bash and run the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git config --global user.name &quot;your name here&quot;
+git config --global user.email email@domain
+</pre></div>
+</div>
+<p>Do the following if you need to add proxy settings.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git config --global http.proxy http://user:password@www-proxy.qdot.qld.gov.au:8080
+git config --global https.proxy https://user:password@www-proxy.qdot.qld.gov.au:8080
+git config --global credential.useHttpPath true
+</pre></div>
+</div>
+<p>Remember to change proxy string as per your organization if you are not using this from TMR’s network.</p>
+<p>This completes setup for git on your machine.</p>
+<p>Once you are done with this stuff please head over to the <a class="reference internal" href="git/git_2fa.html"><span class="doc">Setting up two-factor authentication in GitLab</span></a></p>
+</section>
+<section id="setting-up-two-factor-authentication-in-gitlab">
+<h2>Setting up two-factor authentication in GitLab<a class="headerlink" href="#setting-up-two-factor-authentication-in-gitlab" title="Permalink to this heading"></a></h2>
+<p>Login to your account here [<a class="reference external" href="https://github.com">https://github.com</a>]</p>
+<p>If you don’t have an account, you can <a class="reference external" href="https://github.com">make one here</a>.</p>
+<p>Once you login to your account, make sure you setup Two Factor Authentication in <a class="reference external" href="https://https://github.com/settings/security">settings</a>.</p>
+<p>Keep in mind to save the backup codes somewhere safe in case you loose your device.</p>
+</section>
+<section id="using-git-in-pycharm">
+<h2>Using Git in PyCharm<a class="headerlink" href="#using-git-in-pycharm" title="Permalink to this heading"></a></h2>
+<p>To clone a project from GitHub in PyCharm follow these steps (assuming you have done the setup as per the above installation guide):</p>
+<ol class="arabic simple">
+<li><p>In GitHub (via web browser) navigate to the repository, click the green Code button and then copy the URL shown.</p></li>
+<li><p>Open PyCharm (if you have a project already open, close it) and select Get From Version Control</p></li>
+<li><p>Paste your clone URL from step 1 into the URL field in PyCharm</p></li>
+<li><p>(optional) Change the directory where you want to set up your local repository</p></li>
+<li><p>You will be asked to Log in via GitHub or Use Token. Select Log in via GitHub.</p></li>
+<li><p>Click through the relevant screens to authorise JetBrains to access GitHub; you may need to click the blue request button next to the TAU organisation when you get to the GitHub authorisation screen.</p></li>
+</ol>
+<p>If the authorisation has worked, PyCharm will start cloning your repository and open it as a new PyCharm project. If Step 6 from above doesn’t allow you to authorize Github in PyCharm or if you get some SSH/proxy sounding error, there’s an alternative method to access the repository:</p>
+<ol class="arabic simple">
+<li><p>Create a personal access token (Creating a personal access token - GitHub Docs). Important to save this token somewhere safe.</p></li>
+<li><p>Authorize token to access tmr-tau team (Authorizing a personal access token for use with SAML single sign-on - GitHub Docs)</p></li>
+<li><p>In GitHub (via web browser) navigate to the repository, click the green Code button and then copy the URL shown.</p></li>
+<li><p>Open PyCharm (if you have a project already open, close it) and select Get From Version Control</p></li>
+<li><p>Paste your clone URL from step 3 into the URL field in PyCharm</p></li>
+<li><p>(optional) Change the directory where you want to set up your local repository</p></li>
+<li><p>You will be asked to Log in via GitHub or Use Token. Select Use Token.</p></li>
+<li><p>Insert token when asked.</p></li>
+</ol>
+<p>Navigation between branches and creation of new branches can all be done via your repository menu in the bottom right (it will likely say master after cloning). To create a new branch follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Click on master in the bottom right</p></li>
+<li><p>Click + New branch</p></li>
+<li><p>Give your new branch a name that follows the naming protocol used in this project (usually <code class="docutils literal notranslate"><span class="pre">username/task_youre_working_on</span></code>)</p></li>
+<li><p>Click OK (leaving the checkout branch option ticked will switch you onto this branch and off master)</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Transport Analysis Unit’s Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pg_info.html" class="btn btn-neutral float-right" title="PostgreSQL info" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-22, Department of Transport And Main Roads.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

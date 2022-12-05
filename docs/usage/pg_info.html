@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostgreSQL info &mdash; TAUDocs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Region Foccussed Model Development" href="../projects/rfmd.html" />
+    <link rel="prev" title="Git / GitHub info" href="git_info.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> TAUDocs
+            <img src="../_static/Qld-CoA-Stylised-2LS-mono-rev.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="git_info.html">Git / GitHub info</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PostgreSQL info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#postgresql-overview">PostgreSQL overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-postgresql">Connecting to PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#database-development-protocols">Database development protocols</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#object-ownership">Object ownership</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/rfmd.html">Region Foccussed Model Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/luptai.html">Land-use Urban Planning and Transport Accessibility Indicator (LUPTAI) model.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/seqef.html">SEQEF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/dspark.html">Dspark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/qfm.html">Queensland Freight Model</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TAUDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">PostgreSQL info</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/usage/pg_info.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="postgresql-info">
+<h1>PostgreSQL info<a class="headerlink" href="#postgresql-info" title="Permalink to this heading"></a></h1>
+<section id="postgresql-overview">
+<h2>PostgreSQL overview<a class="headerlink" href="#postgresql-overview" title="Permalink to this heading"></a></h2>
+<p>PostgreSQL (Postgres) is a relational database server (made spatially aware through the PostGIS extension) used by TAU as a data storage, analysis, and ETL tool.</p>
+<p>Some terms used within this documentation:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 57%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>user</em></p></td>
+<td><p>Your postgres username</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">org_proj</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><em>project role</em></p></td>
+<td><p>A role that is used to facilitate
+mutual object ownership</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">proj_dev</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="connecting-to-postgresql">
+<h2>Connecting to PostgreSQL<a class="headerlink" href="#connecting-to-postgresql" title="Permalink to this heading"></a></h2>
+<p>When required, you can be given access to TAU’s PostgreSQL server. A user will be created for you and you may become a member of one or more project roles.</p>
+<p>In addition to your username, password, and desired database the following connection information can be used to connect to the server:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 92%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Host</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tau-rds.tmr.qld.gov.au</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Port</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5432</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="database-development-protocols">
+<h2>Database development protocols<a class="headerlink" href="#database-development-protocols" title="Permalink to this heading"></a></h2>
+<p>There are certain protocols which must be followed when undertaking database development work to ensure collaborators can work together effectively.</p>
+<section id="object-ownership">
+<h3>Object ownership<a class="headerlink" href="#object-ownership" title="Permalink to this heading"></a></h3>
+<p>Object ownership must be managed carefully to ensure that all users collaborating on a project can do everything they need to do. Ownership and it’s associated privileges are not grantable, but they can be inherited by being a member of the role that owns the object. For example, if <code class="docutils literal notranslate"><span class="pre">proj_dev</span></code> owns <code class="docutils literal notranslate"><span class="pre">this_table</span></code> and <code class="docutils literal notranslate"><span class="pre">org_proj</span></code> is a member of <code class="docutils literal notranslate"><span class="pre">proj_dev</span></code> then <code class="docutils literal notranslate"><span class="pre">org_proj</span></code> inherits ownership of <code class="docutils literal notranslate"><span class="pre">this_table</span></code> by proxy. But <code class="docutils literal notranslate"><span class="pre">this_table</span></code> must be owned by <code class="docutils literal notranslate"><span class="pre">proj_dev</span></code> (as opposed to being owned by <code class="docutils literal notranslate"><span class="pre">org_proj</span></code>) otherwise other members of <code class="docutils literal notranslate"><span class="pre">proj_dev</span></code> won’t be able to interact with it fully.</p>
+<p>To ensure this happens, users must always take one of these two paths when interacting with the server:</p>
+<ol class="arabic simple">
+<li><p>After establishing a connection to the server as your user, use the <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">ROLE</span></code> SQL command to assume the <code class="docutils literal notranslate"><span class="pre">proj_dev</span></code> role, so that by default all database admin activities (such as creating and altering tables) are performed as the project role (<a class="reference external" href="https://www.postgresql.org/docs/11/sql-set-role.html">more info</a>), or</p></li>
+<li><p>After creating objects under your user then as soon as practical (or ideally as part of the same script), you must use the <code class="docutils literal notranslate"><span class="pre">ALTER</span> <span class="pre">...</span> <span class="pre">OWNER</span> <span class="pre">TO</span> <span class="pre">proj_dev</span></code> command to hand ownership over to the project role (<a class="reference external" href="https://www.postgresql.org/docs/11/sql-altertable.html">more info in relation to altering tables</a> noting that there are separate <code class="docutils literal notranslate"><span class="pre">ALTER</span></code> commands for other database objects too).</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="git_info.html" class="btn btn-neutral float-left" title="Git / GitHub info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../projects/rfmd.html" class="btn btn-neutral float-right" title="Region Foccussed Model Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-22, Department of Transport And Main Roads.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

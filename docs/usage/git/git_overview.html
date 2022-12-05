@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git overview &mdash; TAUDocs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> TAUDocs
+            <img src="../../_static/Qld-CoA-Stylised-2LS-mono-rev.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git_info.html">Git / GitHub info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pg_info.html">PostgreSQL info</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/rfmd.html">Region Foccussed Model Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/luptai.html">Land-use Urban Planning and Transport Accessibility Indicator (LUPTAI) model.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/seqef.html">SEQEF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/dspark.html">Dspark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/qfm.html">Queensland Freight Model</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TAUDocs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Git overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/git/git_overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git-overview">
+<h1>Git overview<a class="headerlink" href="#git-overview" title="Permalink to this heading"></a></h1>
+<p>First let’s clarify some software and their roles (colours relate to the diagram below):</p>
+<ul class="simple">
+<li><p><strong>GitHub</strong>: Is a platform for storing version controlled code. TAU’s GitHub is managed by ITB under TMR’s enterprise GitHub.</p></li>
+<li><p><strong>PyCharm / VSCode</strong>: These are IDEs you’re using to write code in a workspace (which remains “staged” there until you commit it to your local repository)</p></li>
+<li><p><strong>Git</strong>: Is the software that handles the version controlling of your code and acts as the communication interface between your IDE and GitLab.</p></li>
+</ul>
+<p>Now for some Git terminology and how these features interact:</p>
+<ul class="simple">
+<li><p><strong>Clone/pull</strong>: Clone/pull a project (set of code) from a remote repository to your workspace (local)</p></li>
+<li><p><strong>Branch</strong>: All code has a “main” (sometimes called “master”) branch. The main branch contains the latest working version of all code. You will probably have cloned this branch (although you can clone others). Now you want to start making some changes so you will create a branch of your own, which is a point-in-time deviation from the main branch.</p></li>
+<li><p><strong>Commit</strong>: You’re now working on the branch you created making changes that won’t impact the main branch. Well done, this is good practice. As you make changes in an IDE they’re probably being saved automatically, but when you reach particular milestones you may want to commit those changes. Think of this as a hard save so you have a marker in time that you can go back to. But commits are still only local.</p></li>
+<li><p><strong>Push</strong>: Because you live in fear of losing your work that was not backed up, at the end of each day you make a habit of pushing your code to the remote repository to back it up and let others see where you’re up to. When you push whilst on a branch, you’re still not messing with the main branch, you’re now putting your branch in the remote repository and pushing to that. No harm done!</p></li>
+<li><p><strong>Merge</strong>: You’ve now made all the changes you want to make on that branch and you’re ready to merge it into the main branch. To do this you create a merge request. The maintainer of your repository can talk you through protocols around this as they may vary from project to project.</p></li>
+</ul>
+<p>The below diagram outlines how these actions relate to one another as well as some additional actions.</p>
+<img alt="../../_images/git_flow.png" src="../../_images/git_flow.png" />
+<p>For those within TMR, you can listen to our GitHub training videos for more information.</p>
+<p><a class="reference external" href="https://web.microsoftstream.com/video/2c058dcb-6b39-4a8e-85e9-d5847eca5cb1">Watch ‘Git Fundamentals - Session 1 of 2’ | Microsoft Stream (Classic)</a>
+<a class="reference external" href="https://web.microsoftstream.com/video/955003f0-37f5-4951-933e-1e426820c3dd">Watch ‘Git Fundamentals - Session 2 of 2’ | Microsoft Stream (Classic)</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-22, Department of Transport And Main Roads.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
